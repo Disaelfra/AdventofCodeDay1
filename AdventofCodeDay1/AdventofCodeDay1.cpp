@@ -2,23 +2,27 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include <stack>
-
-//1. [Process Input] Read input file into a stack, count size.
-//                   Create array of {size, 3}.
-//2a. [Find first # in each] For each string pulled off the stack, read until a numeral is found. Store in [increment, 0].
-//2b. [Find last # in each] For each string pulled off the stack, read from the back until a numeral is found. Store in [increment, 1].
-//                          This will catch the edge case where there is only one numeral. 
-//3. [Parse First + Last] Iterate through array. [increment, 2] = concat [increment, 0] + [increment, 1]. 
-//4. [Return Sum] Iterate through array. sum += [increment, 2]. Return sum. 
-
-
+#include <string>
+#include <vector>
+#include "Day1.h"
+using namespace std;
 
 int main()
 {
+    //declare days
+    Day1 day1solution;
 
-    //
-    std::cout << "Hello World!\n";
+    //take input to run a day
+    int day;
+    cout << "Please Select a day to solve: ";
+    cin >> day;
+    cout << "Running day " << day << "\n";
+    day1solution.SolveDay1("InputFile.txt");
+
+    return 0;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
